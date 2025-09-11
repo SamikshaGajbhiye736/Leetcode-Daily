@@ -1,0 +1,41 @@
+# SQL Problem – Find Invalid Tweets
+
+## Problem Statement  
+We are given a table `Tweets` containing tweet IDs and their content.  
+A tweet is considered **invalid** if the number of characters in `content` is **strictly greater than 15**.  
+We need to return the IDs of all invalid tweets.
+
+---
+
+## Table: Tweets  
+
+| Column Name | Type    |
+|-------------|---------|
+| tweet_id    | int     |
+| content     | varchar |
+
+- `tweet_id` is the primary key.  
+- `content` consists of alphanumeric characters, `!`, or spaces only.  
+
+---
+
+## Example  
+
+**Input**  
+
+| tweet_id | content                           |
+|----------|-----------------------------------|
+| 1        | Let us Code                       |
+| 2        | More than fifteen chars are here! |
+
+**Output**  
+
+| tweet_id |
+|----------|
+| 2        |
+
+**Explanation**  
+- Tweet 1 has length = 11 → Valid.  
+- Tweet 2 has length = 33 → Invalid (greater than 15).
+
+
